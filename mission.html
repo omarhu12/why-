@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the mission behind Why+: making knowledge accessible, engaging, and meaningful.">
+  <meta property="og:title" content="Why+ | The Mission">
+  <meta property="og:description" content="Understanding why changes everything. Read our core mission and philosophy.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <title>Why+ | Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific Mission Styles */
+    .mission-hero {
+      height: 60vh;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px var(--space-3) var(--space-4);
+      position: relative;
+      overflow: hidden;
+    }
+    .mission-watermark {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 200px;
+      color: var(--accent);
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .mission-watermark { font-size: 300px; }
+    }
+    .mission-hero h1 {
+      font-size: 40px;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+    @media (min-width: 768px) {
+      .mission-hero h1 { font-size: 64px; }
+    }
+
+    .mission-body {
+      padding: 100px var(--space-3);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .mission-body p {
+      font-size: 20px;
+      line-height: 2;
+      margin-bottom: var(--space-6);
+      color: var(--text-primary);
+    }
+    @media (min-width: 768px) {
+      .mission-body p { font-size: 24px; }
+    }
+
+    /* Closing Line */
+    .closing-line {
+      background: var(--accent);
+      color: var(--bg-primary);
+      text-align: center;
+      padding: 80px var(--space-4);
+    }
+    @media (min-width: 768px) {
+      .closing-line { padding: 120px var(--space-4); }
+    }
+    .closing-line-text {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 32px;
+      font-weight: 700;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .closing-line-text { font-size: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="watch.html">Watch</a>
+        <a href="about.html">About</a>
+      </div>
+      
+      <a href="index.html" class="nav-logo">
+        why<span class="plus">+</span>
+      </a>
+      
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="mission.html" class="nav-cta">Explore Mission</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="mission-hero">
+    <div class="mission-watermark">WHY+</div>
+    <h1>The world is complicated.<br>But the reasons behind it don't have to be.</h1>
+  </header>
+
+  <section class="mission-body reveal">
+    <p>Why+ exists to make knowledge accessible, engaging, and meaningful.</p>
+    <p>Because when you understand why, you start to see the world differently.</p>
+    <p>We believe the most important questions are the ones most people never stop to ask.</p>
+  </section>
+
+  <section class="closing-line reveal">
+    <div class="closing-line-text">
+      Understanding why changes everything.
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col" style="flex: 2;">
+          <div class="footer-logo">why<span class="plus">+</span></div>
+          <p style="max-width: 300px;">Understanding why changes everything. The internet is full of information, but we provide the context.</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="watch.html">Watch</a>
+          <a href="mission.html">Mission</a>
+        </div>
+        <div class="footer-col footer-col-3">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Follow Why+</span>
+          <a href="#" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Why+. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

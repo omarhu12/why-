@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentary-style videos designed to make complex topics engaging and understandable.">
+  <meta property="og:title" content="Why+ | Watch">
+  <meta property="og:description" content="Watch high-quality video explainers answering the world's biggest questions.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <title>Why+ | Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific Watch Styles */
+    .page-hero {
+      height: 40vh;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero h1 {
+      font-size: 40px;
+      margin-bottom: var(--space-3);
+    }
+    @media (min-width: 768px) {
+      .page-hero h1 { font-size: 48px; }
+    }
+    .page-hero-sub {
+      color: var(--text-secondary);
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .video-grid-section { padding: 100px 0; }
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) { .video-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); } }
+    @media (min-width: 1024px) { .video-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+    
+    .video-card { display: block; transition: all 0.25s ease; }
+    .video-card:hover .video-thumbnail { transform: scale(1.02); }
+    .video-card:hover .play-icon { stroke: var(--bg-primary); fill: var(--accent); }
+    
+    .video-thumbnail-wrapper { overflow: hidden; border-radius: var(--radius-card); margin-bottom: var(--space-3); position: relative; }
+    .video-thumbnail {
+      background: var(--bg-secondary);
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      width: 100%;
+    }
+    .play-icon { width: 64px; height: 64px; fill: none; stroke: var(--accent); stroke-width: 2; transition: all 0.3s ease; }
+    
+    .video-meta { display: flex; align-items: baseline; gap: var(--space-2); margin-bottom: var(--space-1); }
+    .video-ep { font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 14px; }
+    .video-duration { color: var(--text-secondary); font-size: 14px; }
+    .video-title { font-family: var(--font-display); font-size: 20px; color: var(--text-heading); line-height: 1.3; }
+
+    /* YouTube CTA */
+    .youtube-cta {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 80px var(--space-3);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+    }
+    .youtube-cta-text { font-family: var(--font-display); font-size: 32px; color: var(--text-heading); }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="watch.html">Watch</a>
+        <a href="about.html">About</a>
+      </div>
+      
+      <a href="index.html" class="nav-logo">
+        why<span class="plus">+</span>
+      </a>
+      
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="mission.html" class="nav-cta">Explore Mission</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <h1>Watch Why+</h1>
+    <p class="page-hero-sub">Documentary-style videos designed to make complex topics engaging and understandable.</p>
+  </header>
+
+  <section class="video-grid-section container">
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <a href="#" class="video-card reveal" style="transition-delay: 100ms;">
+        <div class="video-thumbnail-wrapper">
+          <div class="video-thumbnail">
+            <svg class="play-icon" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/><polygon points="26,18 44,32 26,46"/></svg>
+          </div>
+        </div>
+        <div class="video-meta">
+          <span class="video-ep">EP. 01</span>
+          <span class="video-duration">12 min</span>
+        </div>
+        <h3 class="video-title">Why Artificial Intelligence Changed Everything</h3>
+      </a>
+      <!-- Video 2 -->
+      <a href="#" class="video-card reveal" style="transition-delay: 200ms;">
+        <div class="video-thumbnail-wrapper">
+          <div class="video-thumbnail">
+            <svg class="play-icon" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/><polygon points="26,18 44,32 26,46"/></svg>
+          </div>
+        </div>
+        <div class="video-meta">
+          <span class="video-ep">EP. 02</span>
+          <span class="video-duration">14 min</span>
+        </div>
+        <h3 class="video-title">Why Globalization is Reversing</h3>
+      </a>
+      <!-- Video 3 -->
+      <a href="#" class="video-card reveal" style="transition-delay: 300ms;">
+        <div class="video-thumbnail-wrapper">
+          <div class="video-thumbnail">
+            <svg class="play-icon" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/><polygon points="26,18 44,32 26,46"/></svg>
+          </div>
+        </div>
+        <div class="video-meta">
+          <span class="video-ep">EP. 03</span>
+          <span class="video-duration">15 min</span>
+        </div>
+        <h3 class="video-title">Why the Next Superpower Will Be Different</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- YouTube CTA -->
+  <section class="youtube-cta reveal">
+    <div class="youtube-cta-text">Watch more on YouTube</div>
+    <a href="#" class="btn btn-solid" style="display: inline-flex; gap: 8px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+      YouTube Channel
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col" style="flex: 2;">
+          <div class="footer-logo">why<span class="plus">+</span></div>
+          <p style="max-width: 300px;">Understanding why changes everything. The internet is full of information, but we provide the context.</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="watch.html">Watch</a>
+          <a href="mission.html">Mission</a>
+        </div>
+        <div class="footer-col footer-col-3">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Follow Why+</span>
+          <a href="#" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Why+. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore deeply researched topics across geopolitics, technology, economics, and history.">
+  <meta property="og:title" content="Why+ | Topics">
+  <meta property="og:description" content="Discover analytical explainers that answer the biggest \"why\" questions.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <title>Why+ | Topics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific Topics Styles */
+    .page-hero {
+      height: 40vh;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero h1 {
+      font-size: 40px;
+      margin-bottom: var(--space-3);
+    }
+    @media (min-width: 768px) {
+      .page-hero h1 { font-size: 48px; }
+    }
+    .page-hero-sub {
+      color: var(--text-secondary);
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .topics-section { padding: 100px 0; }
+    .topics-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 768px) { .topics-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); } }
+    @media (min-width: 1024px) { .topics-grid { grid-template-columns: repeat(3, 1fr); } }
+    
+    .topic-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 48px var(--space-4); /* Larger padding specified for topics expanded grid */
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .topic-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 168, 76, 0.6);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .topic-card-icon svg { width: 48px; height: 48px; stroke: var(--text-heading); stroke-width: 1.5; fill: none; }
+    .topic-category { font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 16px; margin-bottom: var(--space-1); }
+    .topic-teaser { color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
+
+    /* Questions Strip */
+    .questions-strip {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 100px var(--space-3);
+      text-align: center;
+    }
+    .questions-heading {
+      font-family: var(--font-display);
+      font-size: 32px;
+      margin-bottom: var(--space-3);
+    }
+    @media (min-width: 768px) {
+      .questions-heading { font-size: 40px; }
+    }
+    .questions-sub p { margin-bottom: 0; }
+    .questions-sub a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 4px;
+      font-size: 18px;
+    }
+    .questions-sub a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="watch.html">Watch</a>
+        <a href="about.html">About</a>
+      </div>
+      
+      <a href="index.html" class="nav-logo">
+        why<span class="plus">+</span>
+      </a>
+      
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="mission.html" class="nav-cta">Explore Mission</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <h1>Topics We Explore</h1>
+    <p class="page-hero-sub">From international politics to the future of artificial intelligence — we analyze the patterns that shape our world.</p>
+  </header>
+
+  <section class="topics-section container">
+    <div class="topics-grid">
+      <!-- Card 1 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 100ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="topic-category">Geopolitics</div>
+        <div class="topic-teaser">Why do countries go to war? Why do borders change? Why do alliances collapse overnight?</div>
+      </a>
+      <!-- Card 2 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 200ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+        <div class="topic-category">Technology</div>
+        <div class="topic-teaser">Why do certain technologies reshape civilization? Why do others disappear?</div>
+      </a>
+      <!-- Card 3 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 300ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)"/></svg></div>
+        <div class="topic-category">Science</div>
+        <div class="topic-teaser">Why do breakthroughs take decades? Why does science sometimes get it wrong?</div>
+      </a>
+      <!-- Card 4 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 400ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="3 14 8 9 13 14 21 6"/></svg></div>
+        <div class="topic-category">Economics</div>
+        <div class="topic-teaser">Why do economies rise and collapse? Why does inequality persist despite growth?</div>
+      </a>
+      <!-- Card 5 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 500ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="topic-category">History</div>
+        <div class="topic-teaser">Why do empires fall? Why do revolutions succeed where others fail?</div>
+      </a>
+      <!-- Card 6 -->
+      <a href="#" class="topic-card reveal" style="transition-delay: 600ms;">
+        <div class="topic-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M9 14.5c1.5 1.5 4.5 1.5 6 0"/><circle cx="8.5" cy="9.5" r="1.5"/><circle cx="15.5" cy="9.5" r="1.5"/></svg></div>
+        <div class="topic-category">Culture</div>
+        <div class="topic-teaser">Why do social trends suddenly explode? Why do ideas spread and mutate?</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Questions Strip -->
+  <section class="questions-strip reveal">
+    <div class="container">
+      <h2 class="questions-heading">Why do global systems work the way they do?</h2>
+      <div class="questions-sub">
+        <p><a href="watch.html">Watch our explainer videos to find out. &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col" style="flex: 2;">
+          <div class="footer-logo">why<span class="plus">+</span></div>
+          <p style="max-width: 300px;">Understanding why changes everything. The internet is full of information, but we provide the context.</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="watch.html">Watch</a>
+          <a href="mission.html">Mission</a>
+        </div>
+        <div class="footer-col footer-col-3">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Follow Why+</span>
+          <a href="#" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Why+. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

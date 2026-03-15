@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Why+ exists to answer the questions most people never stop to ask.">
+  <meta property="og:title" content="Why+ | About Us">
+  <meta property="og:description" content="A digital explainer platform decoding geopolitics, technology, and more.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <title>Why+ | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific About Styles */
+    .page-hero {
+      height: 50vh;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-label {
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: var(--space-3);
+    }
+    .page-hero h1 {
+      font-size: 40px;
+      margin-bottom: var(--space-3);
+    }
+    @media (min-width: 768px) {
+      .page-hero h1 { font-size: 48px; }
+    }
+    .page-hero-sub {
+      color: var(--text-secondary);
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+    
+    .about-body {
+      padding: 100px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .about-body { grid-template-columns: 1fr 1fr; }
+    }
+    .about-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text-primary);
+    }
+    .about-decorative {
+      position: relative;
+      height: 100%;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .about-decorative-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 140px;
+      color: var(--accent);
+      opacity: 0.08;
+      transform: rotate(-15deg);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .about-decorative-text { font-size: 200px; }
+    }
+
+    .topics-list-section {
+      text-align: center;
+      padding: 100px 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .topics-list-heading {
+      font-size: 24px;
+      margin-bottom: var(--space-6);
+    }
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-3);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .pill {
+      background: var(--bg-elevated);
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      color: var(--accent);
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .approach-section { padding: 120px 0; }
+    .approach-heading { text-align: center; font-size: 36px; margin-bottom: var(--space-8); }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 768px) {
+      .approach-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    }
+    .principle-card { border-left: 3px solid var(--accent); padding: var(--space-3) var(--space-4); }
+    .principle-title { font-family: var(--font-display); font-size: 24px; color: var(--text-heading); margin-bottom: var(--space-2); }
+    .principle-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="watch.html">Watch</a>
+        <a href="about.html">About</a>
+      </div>
+      
+      <a href="index.html" class="nav-logo">
+        why<span class="plus">+</span>
+      </a>
+      
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="mission.html" class="nav-cta">Explore Mission</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-label">ABOUT WHY+</div>
+    <h1>What is Why+?</h1>
+    <p class="page-hero-sub">A digital explainer platform dedicated to answering the questions most people never stop to ask.</p>
+  </header>
+
+  <section class="container about-body reveal">
+    <div class="about-text">
+      <p>Why+ is a documentary-style explainer platform in the vein of high-end cinematic journals. We believe that behind every headline, every historical event, and every technological leap, there is a complex mechanism. Our mission is to decode these mechanisms.</p>
+      <p>We combine rigorous research, compelling storytelling, and visual clarity to make sense of a complicated world. Because knowing what is happening is only half the battle. Understanding <em>why</em> it is happening changes everything.</p>
+    </div>
+    <div class="about-decorative">
+      <div class="about-decorative-text">WHY?</div>
+    </div>
+  </section>
+
+  <section class="topics-list-section reveal">
+    <div class="container">
+      <h2 class="topics-list-heading">We explore topics across</h2>
+      <div class="pills-container">
+        <span class="pill">Geopolitics</span>
+        <span class="pill">Technology</span>
+        <span class="pill">Science</span>
+        <span class="pill">Economics</span>
+        <span class="pill">History</span>
+        <span class="pill">Culture</span>
+        <span class="pill">Global Systems</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container approach-section reveal">
+    <h2 class="approach-heading">Our Approach</h2>
+    <div class="approach-grid">
+      <div class="principle-card">
+        <h3 class="principle-title">Curiosity</h3>
+        <p class="principle-desc">We begin with the questions people naturally ask but rarely get clear answers to.</p>
+      </div>
+      <div class="principle-card">
+        <h3 class="principle-title">Clarity</h3>
+        <p class="principle-desc">Complex systems are broken down into simple explanations anyone can understand.</p>
+      </div>
+      <div class="principle-card">
+        <h3 class="principle-title">Context</h3>
+        <p class="principle-desc">We look beyond headlines to explain the deeper forces shaping events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col" style="flex: 2;">
+          <div class="footer-logo">why<span class="plus">+</span></div>
+          <p style="max-width: 300px;">Understanding why changes everything. The internet is full of information, but we provide the context.</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="watch.html">Watch</a>
+          <a href="mission.html">Mission</a>
+        </div>
+        <div class="footer-col footer-col-3">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Follow Why+</span>
+          <a href="#" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Why+. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

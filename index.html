@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Why+ explores the deeper story behind the events, systems, and ideas that shape our world.">
+  <meta property="og:title" content="Why+ | Understanding Why Changes Everything">
+  <meta property="og:description" content="Documentary-style explainers on geopolitics, technology, science, economics, history, and culture.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <title>Why+ | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific Home Light Styles */
+    body {
+      padding-top: 100px; /* Account for floating nav */
+    }
+
+    .hero-section {
+      padding: var(--space-8) 0 var(--space-6);
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      align-items: flex-start;
+    }
+    @media (min-width: 1024px) {
+      .hero-layout {
+        grid-template-columns: 1.2fr 1fr;
+        gap: var(--space-8);
+      }
+    }
+    .hero-headline {
+      font-size: 48px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    @media (min-width: 768px) { .hero-headline { font-size: 64px; } }
+    @media (min-width: 1024px) { .hero-headline { font-size: 80px; } }
+    
+    .hero-content p {
+      color: var(--text-secondary);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+    }
+    
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    
+    .member-avatars {
+      display: flex;
+      align-items: center;
+      background: var(--border);
+      color: var(--bg-secondary);
+      padding: 6px 16px 6px 6px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .member-avatars img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      margin-right: -10px;
+    }
+    .member-avatars img:last-of-type {
+      margin-right: 12px;
+    }
+
+    /* Featured Block */
+    .featured-block {
+      margin: var(--space-8) 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 1024px) {
+      .featured-block {
+        grid-template-columns: 1.5fr 1fr;
+      }
+    }
+    
+    .card-large {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-4);
+      transition: transform 0.3s ease;
+    }
+    .card-large:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-4);
+    }
+    .card-tag {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-heading);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-tag::before {
+      content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--border);
+    }
+    .card-meta { font-size: 13px; font-weight: 500; color: rgba(0,0,0,0.6); }
+
+    .card-large-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 768px) {
+      .card-large-content { grid-template-columns: 1fr 1fr; }
+    }
+    .card-large h2 { font-size: 32px; letter-spacing: -0.02em; margin-bottom: var(--space-2); }
+    .card-large p { color: rgba(0,0,0,0.7); font-size: 15px; margin-bottom: var(--space-4); }
+    .card-large .read-more { font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+    .card-large .read-more svg { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; padding: 4px; }
+    .card-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      aspect-ratio: 4/3;
+    }
+
+    .card-small-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    
+    .card-small {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-3);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    @media (min-width: 768px) {
+      .card-small { grid-template-columns: 120px 1fr; }
+    }
+    .card-small:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+    .card-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      aspect-ratio: 1;
+    }
+    .card-small h3 { font-size: 18px; margin: var(--space-2) 0 var(--space-1); }
+    .card-small p { color: var(--text-secondary); font-size: 14px; margin-bottom: var(--space-2); line-height: 1.4; }
+
+    /* Discover Section */
+    .discover-section {
+      margin: var(--space-12) 0 var(--space-8);
+    }
+    .discover-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-4);
+    }
+    .discover-header h2 { font-size: 32px; letter-spacing: -0.02em; margin: 0; }
+    .discover-header svg { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 50%; padding: 6px; }
+
+    .discover-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 768px) {
+      .discover-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .discover-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .post-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      transition: transform 0.3s ease;
+    }
+    .post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+    .post-card img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .post-card .tags-row { display: flex; align-items: center; gap: var(--space-2); margin-top: -8px; }
+    .post-card h3 { font-size: 20px; line-height: 1.3; margin-bottom: var(--space-1); }
+    .post-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="watch.html">Watch</a>
+        <a href="about.html">About</a>
+      </div>
+      
+      <a href="index.html" class="nav-logo">
+        why<span class="plus">+</span>
+      </a>
+      
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="mission.html" class="nav-cta">Explore Mission</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero-section reveal">
+      <div class="hero-layout">
+        <h1 class="hero-headline">The internet is full of information. What affects one...</h1>
+        <div class="hero-content">
+          <p>We are a documentary-style explainer platform that builds narratives for the curious mind. Transform how you understand the world around you, every time. Because knowing what happened is useful, but understanding why changes everything.</p>
+          <div class="hero-actions">
+            <a href="topics.html" class="btn btn-solid">Explore Topics</a>
+            <div class="member-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Member 1">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Member 2">
+              <span>12.5k readers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-block reveal" style="transition-delay: 100ms;">
+      <!-- Main Highlight -->
+      <a href="topics.html" class="card-large">
+        <div class="card-header">
+          <span style="font-weight: 700;">What's New?</span>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <span class="card-tag">Geopolitics</span>
+            <span class="card-meta">14 Min. &mdash; Mar 15, 2026</span>
+          </div>
+        </div>
+        <div class="card-large-content">
+          <div>
+            <h2>How Will Global Borders Change In 100 Years?</h2>
+            <p>Why do countries go to war? Why do alliances shift and empires fall? Explore the patterns of political power and human geography across the globe.</p>
+            <div class="read-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&h=450" alt="Geopolitics landscape">
+        </div>
+      </a>
+
+      <!-- Side Stack -->
+      <div class="card-small-stack">
+        <a href="topics.html" class="card-small">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&h=300" alt="Tech">
+          <div>
+            <div style="display: flex; gap: 8px;">
+              <span class="card-tag">Technology</span>
+            </div>
+            <h3>Why do certain technologies reshape civilization?</h3>
+            <p>From AI to energy scaling, understand the rules of society.</p>
+            <span class="card-meta">8 min. &mdash; Mar 12, 2026</span>
+          </div>
+        </a>
+        <a href="topics.html" class="card-small">
+          <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=300&h=300" alt="Science">
+          <div>
+            <div style="display: flex; gap: 8px;">
+              <span class="card-tag">Science</span>
+            </div>
+            <h3>Why does science sometimes get it wrong?</h3>
+            <p>The slow decades of breakthroughs vs sudden discoveries.</p>
+            <span class="card-meta">10 min. &mdash; Mar 10, 2026</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="discover-section reveal">
+      <div class="discover-header">
+        <h2>Discover Our Featured Topics</h2>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="discover-grid">
+        <!-- Topic 1 -->
+        <a href="topics.html" class="post-card reveal" style="transition-delay: 100ms;">
+          <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=500&h=320" alt="Economics">
+          <div class="tags-row">
+            <span class="card-tag">Economics</span>
+            <span class="card-meta">12 min. &mdash; Mar 08, 2026</span>
+          </div>
+          <h3>Why do economies rise and collapse?</h3>
+          <p>Understanding the persistent inequalities despite explosive growth. Transform how you perceive markets.</p>
+        </a>
+        
+        <!-- Topic 2 -->
+        <a href="topics.html" class="post-card reveal" style="transition-delay: 200ms;">
+          <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=500&h=320" alt="History">
+          <div class="tags-row">
+            <span class="card-tag">History</span>
+            <span class="card-meta">15 min. &mdash; Mar 05, 2026</span>
+          </div>
+          <h3>Why do some civilizations endure while others vanish?</h3>
+          <p>Why do empires fall? Why do revolutions succeed where others fail? The deep historical context.</p>
+        </a>
+
+        <!-- Topic 3 -->
+        <a href="topics.html" class="post-card reveal" style="transition-delay: 300ms;">
+          <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=500&h=320" alt="Culture">
+          <div class="tags-row">
+            <span class="card-tag">Culture</span>
+            <span class="card-meta">9 min. &mdash; Mar 02, 2026</span>
+          </div>
+          <h3>Why do ideas and beliefs capture human imagination?</h3>
+          <p>Why do social trends suddenly explode? Explore how ideas spread and mutate across global cultures.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col" style="flex: 2;">
+          <div class="footer-logo">why<span class="plus">+</span></div>
+          <p style="max-width: 300px;">Understanding why changes everything. The internet is full of information, but we provide the context.</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="topics.html">Topics</a>
+          <a href="watch.html">Watch</a>
+          <a href="mission.html">Mission</a>
+        </div>
+        <div class="footer-col footer-col-3">
+          <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Follow Why+</span>
+          <a href="#" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Why+. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
