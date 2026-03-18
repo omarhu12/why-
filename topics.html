@@ -51,18 +51,22 @@
     
     .topic-card {
       background: var(--bg-secondary);
-      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-card);
       padding: 48px var(--space-4); /* Larger padding specified for topics expanded grid */
-      transition: all 0.25s ease;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
       display: flex;
       flex-direction: column;
       gap: var(--space-3);
     }
     .topic-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(201, 168, 76, 0.6);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
     }
     .topic-card-icon svg { width: 48px; height: 48px; stroke: var(--text-heading); stroke-width: 1.5; fill: none; }
     .topic-category { font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 16px; margin-bottom: var(--space-1); }
@@ -107,6 +111,7 @@
         <a href="topics.html">Topics</a>
         <a href="watch.html">Watch</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
       
       <a href="index.html" class="nav-logo">
@@ -166,13 +171,15 @@
     </div>
   </section>
 
-  <!-- Questions Strip -->
-  <section class="questions-strip reveal">
-    <div class="container">
-      <h2 class="questions-heading">Why do global systems work the way they do?</h2>
-      <div class="questions-sub">
-        <p><a href="watch.html">Watch our explainer videos to find out. &rarr;</a></p>
-      </div>
+  <!-- Newsletter Strip (was Questions) -->
+  <section class="container">
+    <div class="reveal" style="background: var(--bg-secondary); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: var(--radius-card); padding: var(--space-8) var(--space-4); text-align: center; margin-bottom: var(--space-8); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+      <h2 style="font-size: 36px; margin-bottom: var(--space-2);">Understand why, every week.</h2>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--space-4); font-size: 18px;">Join 12,500+ curious minds. Sign up for our weekly deep dive into the forces shaping our world.</p>
+      <form style="display: flex; gap: var(--space-2); max-width: 500px; margin: 0 auto; justify-content: center; flex-wrap: wrap;">
+        <input type="email" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 14px 24px; border-radius: var(--radius-pill); border: 1px solid var(--border); background: var(--bg-primary); color: var(--text-heading); font-family: var(--font-body); font-size: 16px;">
+        <button type="submit" class="btn btn-solid">Subscribe</button>
+      </form>
     </div>
   </section>
 
@@ -188,6 +195,7 @@
           <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
           <a href="topics.html">Topics</a>
           <a href="watch.html">Watch</a>
           <a href="mission.html">Mission</a>
