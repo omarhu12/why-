@@ -4,25 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;700&display=swap');
 
 :root {
-  --bg-primary: #f2f2f3;
-  /* Light gray page background */
-  --bg-secondary: #ffffff;
-  /* White card background */
-  --bg-elevated: #ffffff;
-  /* White nav background */
+  --bg-primary: #000000;
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  /* Tranculent glass overlay */
+  --bg-elevated: transparent;
+  /* Transparent nav background */
   --accent: #017EED;
-  /* Lime green */
+  /* Theme Blue */
   --accent-hover: #017fedb0;
-  /* Darker lime */
-  --text-primary: #333333;
-  /* Dark gray text */
-  --text-secondary: #6b7280;
+  --text-primary: #f3f4f6;
+  /* Light gray text */
+  --text-secondary: #9ca3af;
   /* Medium gray text */
-  --text-heading: #111111;
-  /* Near black heading */
-  --border: #111111;
-  /* Dark solid border matching reference */
-  --divider: #121F29;
+  --text-heading: #ffffff;
+  /* White headings */
+  --border: #333333;
+  /* Lighter border for contrast in dark mode */
+  --divider: #222222;
   /* Soft divider */
 
   --logo-blue: #017EED;
@@ -68,6 +66,12 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  background-color: var(--bg-primary); /* #000000 */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
 }
 
 body.no-scroll {
@@ -175,13 +179,11 @@ p {
   width: calc(100% - 48px);
   max-width: 1200px;
   height: 64px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
+  background: transparent;
+  border: none;
   z-index: 1000;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -194,17 +196,22 @@ p {
 
 .nav-logo {
   font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text-heading);
-  letter-spacing: -1px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff; /* Explicitly white text for dark background */
+  letter-spacing: -2px;
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-logo .plus {
-  color: var(--logo-blue);
-  font-weight: 700;
+  color: #0f62fe; /* Matching the deep blue from the image */
+  font-weight: 900;
 }
 
 .nav-links {
@@ -304,8 +311,10 @@ p {
   cursor: pointer;
   transition: all 0.25s ease;
   background: var(--bg-secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--text-heading);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn:hover {
@@ -349,7 +358,9 @@ p {
 /* Footer */
 .footer {
   background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--space-8) 0 var(--space-4);
   color: var(--text-secondary);
   margin-top: var(--space-8);
