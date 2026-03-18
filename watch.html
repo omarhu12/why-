@@ -56,6 +56,9 @@
     .video-thumbnail-wrapper { overflow: hidden; border-radius: var(--radius-card); margin-bottom: var(--space-3); position: relative; }
     .video-thumbnail {
       background: var(--bg-secondary);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       aspect-ratio: 16 / 9;
       display: flex;
       align-items: center;
@@ -95,6 +98,7 @@
         <a href="topics.html">Topics</a>
         <a href="watch.html">Watch</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
       
       <a href="index.html" class="nav-logo">
@@ -158,12 +162,14 @@
   </section>
 
   <!-- YouTube CTA -->
-  <section class="youtube-cta reveal">
-    <div class="youtube-cta-text">Watch more on YouTube</div>
-    <a href="#" class="btn btn-solid" style="display: inline-flex; gap: 8px;">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
-      YouTube Channel
-    </a>
+  <section class="container">
+    <div class="reveal" style="background: var(--bg-secondary); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: var(--radius-card); padding: var(--space-8) var(--space-4); text-align: center; margin-bottom: var(--space-8); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+      <h2 style="font-size: 36px; margin-bottom: var(--space-4);">Watch more on YouTube</h2>
+      <a href="#" class="btn btn-solid" style="display: inline-flex; gap: 8px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.93V9.07L15.333,12L9.667,14.93z"/></svg>
+        YouTube Channel
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -178,6 +184,7 @@
           <span style="font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">Explore</span>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
           <a href="topics.html">Topics</a>
           <a href="watch.html">Watch</a>
           <a href="mission.html">Mission</a>
